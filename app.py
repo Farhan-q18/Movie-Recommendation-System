@@ -70,9 +70,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
-
-# Custom CSS for better styling
 # Custom CSS for better styling
 st.markdown("""
 <style>
