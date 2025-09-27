@@ -70,6 +70,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+
+
+# Custom CSS for better styling
 # Custom CSS for better styling
 st.markdown("""
 <style>
@@ -88,31 +91,36 @@ st.markdown("""
         color: white;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    /* removed pink cards; using plain captions under posters */
     .sidebar .sidebar-content {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
-    .stSelectbox > div > div {
-        background-color: #f0f2f6;
-        color: white !important;
-    }
+
+    /* --- DEFINITIVE FIX FOR SELECTBOX --- */
+
+    /* Style the label of the selectbox ("Select a movie:") */
     .stSelectbox label {
-        color: #ffffff !important;
+        color: #ffffff !important; /* Label text color */
         font-weight: bold;
     }
-    .sidebar .stSelectbox label {
-        color: #ffffff !important;
-        font-weight: bold;
+    
+    /* Style the dropdown menu items */
+    .st-emotion-cache-102nprc li {
+        color: #000000 !important; /* Dropdown text color */
     }
-    .stSelectbox div[data-baseweb="select"] > div {
-        color: #000000 !important;
+
+    /* Style the background of the main selectbox */
+    div[data-baseweb="select"] > div {
+        background-color: #f0f2f6 !important; /* Box background */
+        color: #000000 !important; /* Text color for selected item */
     }
-    .stSelectbox div[data-baseweb="select"] > div > div {
-        color: #000000 !important;
+
+    /* Style the text when you are typing in the selectbox */
+    .stSelectbox input {
+        color: #000000 !important; /* Typing text color */
     }
-    .stSelectbox div[data-baseweb="select"] > div > div > div {
-        color: #000000 !important;
-    }
+
+    /* --- END OF FIX --- */
+
 </style>
 """, unsafe_allow_html=True)
 
