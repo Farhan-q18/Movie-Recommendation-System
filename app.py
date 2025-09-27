@@ -319,7 +319,7 @@ def main():
         else:
             st.warning(f"No movies found matching '{search_term}'")
     
-    # Footer
+    
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center; color: #666; padding: 2rem;'>
